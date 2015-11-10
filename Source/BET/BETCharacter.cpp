@@ -66,9 +66,6 @@ void ABETCharacter::SetupPlayerInputComponent(class UInputComponent* InputCompon
 {
 	// set up gameplay key bindings
 	check(InputComponent);
-
-	InputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
-	InputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 	
 	//InputComponent->BindTouch(EInputEvent::IE_Pressed, this, &ABETCharacter::TouchStarted);
 	if( EnableTouchscreenMovement(InputComponent) == false )
